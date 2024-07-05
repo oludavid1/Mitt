@@ -1,0 +1,623 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mandali&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Navigation bar */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 40px;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo .text {
+  display: flex;
+  align-items: center;
+}
+
+.logo .text div.text-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.logo .text h2 {
+  font-size: 46px;
+  color: #225677;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.log {
+  width: 138px;
+  height: 130px;
+  position: relative;
+  left: 28px;
+  top: -8.43px;
+  mix-blend-mode: darken;
+}
+
+.after {
+  color: #8cacba;
+  font-size: 16px;
+  line-height: 18.57px;
+  letter-spacing: -0.15px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #054a68 0%, #52829c 100%);
+  border-radius: 5px;
+  left: 0;
+  bottom: -6px;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  transform-origin: right;
+}
+
+.nav-links li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 20px;
+  position: relative;
+  right: 110px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  color: #225677;
+  font-weight: 700;
+}
+
+.button {
+  margin-left: 25px;
+  padding: 14px;
+  width: 110px;
+  position: relative;
+  right: 100px;
+  font-size: 12px;
+  transition: all 0.5s;
+  border: none;
+  background: linear-gradient(to right, #054a68 0%, #52829c 100%);
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Home Section */
+.page {
+  padding: 40px 0;
+  position: relative;
+  top: 100px;
+}
+
+.containerMain {
+  padding: 40px;
+  margin-left: 69px !important;
+  margin: 0 auto;
+}
+
+.homebg .containerMain {
+  display: flex;
+  justify-content: space-between;
+}
+
+.halfSection {
+  width: 823px;
+}
+
+.halfSection h1 {
+  font-size: 50px;
+  line-height: 62px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #033348;
+  font-weight: 700;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  letter-spacing: -0.58px;
+}
+
+.aim {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Mandali", sans-serif;
+  line-height: 20px;
+  color: #033348;
+  padding-bottom: 20px;
+}
+
+.butt {
+  background: linear-gradient(100.11deg, #054a68 0%, #52829c 100%);
+  padding: 14px, 20px, 14px, 20px;
+  width: 160px;
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 58px;
+  font-weight: 200;
+  font-family: "Plus Jakara Sans";
+  font-size: 18px;
+  transition: all 0.5s;
+  letter-spacing: 1px;
+  outline: none;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.icon {
+  position: relative;
+  top: 2px;
+}
+
+i {
+  font-weight: 800;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.halfSection img {
+  position: relative;
+  bottom: 30px;
+}
+
+/* Services Section */
+.service {
+  text-align: center;
+  font-size: 30px;
+  color: #033348;
+  margin-top: 95px;
+  padding-bottom: 60px;
+}
+
+.contain {
+  background: linear-gradient(180deg, #033348 0%, #054a68 100%);
+  height: max-content;
+  padding: 30px 0;
+}
+
+.container-service {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background: linear-gradient(180deg, #054a68 0%, #52829c 100%);
+  border-radius: 20px;
+  padding: 41px, 39px, 41px, 39px;
+  width: 340px;
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.card-inner {
+  width: 274px !important;
+  height: 393px !important;
+  gap: 26px;
+  opacity: 0px;
+  margin: auto;
+}
+
+.card h3 {
+  font-family: "Plus Jakarta Sans";
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 27.63px;
+  text-align: left;
+  width: 170px;
+  color: #fff;
+  height: 28px;
+  padding-top: 20px;
+  gap: 0px;
+  opacity: 0px;
+  padding-bottom: 20px;
+}
+
+.card p {
+  gap: 0px;
+  opacity: 0px;
+  font-family: "Inter";
+  font-size: 15px;
+  line-height: 25.04px;
+  padding-top: 25px;
+  letter-spacing: 1.2px;
+  padding-bottom: 25px;
+  text-align: left;
+  color: #f6f8fa;
+}
+
+.wid {
+  width: 153px;
+  height: 153px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.widd {
+  width: 154px;
+  height: 154px;
+  position: relative;
+  right: 15px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+button {
+  border: none;
+}
+
+.read {
+  width: 266px;
+  height: 62px;
+  padding: 16px 60px 17px 60px;
+  gap: 10px;
+  border-radius: 5px;
+  opacity: 0px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28.8px;
+  text-align: center;
+  background: #033348;
+}
+
+.buttImg {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  left: 13px;
+  top: 3px;
+  gap: 0px;
+  opacity: 0px;
+  rotate: 90 deg;
+}
+
+/* About Us Section */
+.container-about {
+  width: 80%;
+  margin: auto;
+}
+
+.content {
+  height: 428px;
+  position: relative;
+  top: 24px;
+  gap: 0px;
+  align-items: center;
+  opacity: 0px;
+}
+
+.about h2 {
+  font-family: "Plus Jakarta Sans";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 44.2px;
+  color: #033348;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.content p {
+  line-height: 25px;
+  padding-bottom: 22px;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: "Inter";
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(to right, #043f59 100%, #4f86a4 0%);
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  color: #fff;
+}
+
+.footer div {
+  max-width: 300px;
+}
+
+.footer h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.footer p,
+.footer li {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .contact p,
+.footer .location p {
+  margin: 0 0 10px 0;
+}
+
+.footer .pages ul,
+.footer .features ul,
+.footer .follows ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer .pages li,
+.footer .features li,
+.footer .follows li {
+  margin-bottom: 10px;
+}
+
+.footer .pages a,
+.footer .features a,
+.footer .follows a {
+  display: block;
+  color: #fff;
+}
+
+.footer .follows a i {
+  margin-right: 8px;
+}
+
+.copyright {
+  text-align: center;
+  background: linear-gradient(to right, #043f59 100%, #4f86a4 0%);
+  color: #8cacba;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 38.07px;
+}
+
+.footer .contact {
+  text-align: left;
+  margin-top: 30px;
+  font-family: "Plus Jakarta Sans";
+  line-height: 27.63px;
+  text-align: left;
+  border-right: 2px solid #8cacba;
+  padding-right: 6rem;
+}
+
+.footer .contact h3 {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.footer .contact p {
+  margin: 22px 0;
+  background-color: #fff;
+  color: #054561;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 39.13px;
+  text-align: left;
+}
+
+.footer .contact a {
+  font-size: 14px;
+  color: #8cacba;
+  text-decoration: none;
+}
+
+.footer .contact a:hover {
+  text-decoration: underline;
+}
+
+.footer .location {
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.footer .location h3 {
+  font-family: "Plus Jakarta Sans";
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 27.63px;
+  text-align: left;
+}
+
+.footer .location p {
+  font-size: 14px;
+  color: #8cacba;
+  line-height: 1.9rem;
+}
+
+.pages h3,
+.features h3,
+.follows h3 {
+  font-family: "Plus Jakarta Sans";
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 27.63px;
+}
+
+.pages li,
+.features li,
+.follows li {
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.footer .pages h3,
+.footer .features h3,
+.footer .follows h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer .pages a,
+.footer .features a,
+.footer .follows a {
+  font-size: 14px;
+  font-weight: 200;
+  color: #8cacba;
+  text-decoration: none;
+}
+
+.footer .pages a:hover,
+.footer .features a:hover,
+.footer .follows a:hover {
+  text-decoration: underline;
+}
+
+.footer .follows a i {
+  margin-right: 8px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  #navbar {
+    padding: 10px 20px;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .containerMain {
+    flex-direction: column;
+  }
+
+  .halfSection {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  .aim {
+    font-size: 16px;
+  }
+
+  .button {
+    font-size: 14px;
+  }
+
+  .butt {
+    font-size: 14px;
+  }
+
+  .container-service {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .footer h3 {
+    font-size: 20px;
+  }
+
+  .footer p,
+  .footer a {
+    font-size: 14px;
+  }
+}
